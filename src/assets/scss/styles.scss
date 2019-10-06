@@ -283,12 +283,30 @@ header {
 .completed-rojects {
   @include size(1438px, 1074px);
   
+  @media (max-width: 375px) {
+    width: 375px;
+  }
+
   .dark-side {
     @include size(1438px, 900px);
     background: $bgColor;
     border-top: 1px solid $bgColor;
+    
+      @media (max-width: 375px) {
+        width: 375px;
+      }
+
+    .main-slider {
+      @media (max-width: 375px) {
+        width: 375px;
+      }
+    }
 
     .slide-nav {
+      @media (max-width: 375px) {
+        display: none;
+      }
+
       margin: 107px 0 52px 554px;
 
       ul {
@@ -320,12 +338,22 @@ header {
     }
 
     &-slider {
+
+      @media (max-width: 375px) {
+        width: 375px;
+      }
+
       @include size(1438px, 470px);
       display: flex;
 
       &-text {
         @include size(455px, 470px);
         margin: 0 40px 0 100px;
+        
+        @media (max-width: 375px) {
+          width: 375px;
+          margin: 0;
+        }
 
         .dark-header-text {
           font-family: $yesevaOneFace;
@@ -339,6 +367,17 @@ header {
 
           span {
             margin-left: 20px;
+
+            @media (max-width: 375px) {
+              display: none;
+            }
+          }
+
+          @media (max-width: 375px) {
+            width: 135px;
+            text-align: center;
+            font-size: 22px;
+            margin: 35px auto 0;
           }
         }
 
@@ -348,15 +387,28 @@ header {
           color: $textColor;
           font-family: FuturaBookC;
           margin-top: 35px;
+
+          @media (max-width: 375px) {
+            font-size: 14px;
+            text-align: center;
+            margin: 22px 32px 36px 32px;
+          }
         }
 
         .dark-param-text {
           display: flex;
           flex-wrap: wrap;
-      
+          
+          @media (max-width: 375px) {
+            justify-content: center;
+          }
           .element {
             width: 213px;
             margin: 42px 0 0 0;
+            
+            @media (max-width: 375px) {
+              width: 170px;
+            }
 
             &-header {
               font-family: $yesevaOneFace;
@@ -367,6 +419,10 @@ header {
               text-transform: uppercase;
               color: $mainTextColor;
               margin-bottom: 9px;
+
+              @media (max-width: 375px) {
+                font-size: 14px;
+              }
             }
 
             &-description {
@@ -375,6 +431,10 @@ header {
               font-size: 15px;
               line-height: 20px;
               color: $textColor;
+
+              @media (max-width: 375px) {
+                font-size: 14px;
+              }
             }
           }
         }
@@ -395,6 +455,10 @@ header {
           margin: 190px 0 0 730px;
           cursor: pointer;
         }
+
+        @media (max-width: 375px) {
+          display: none;
+        }
       }
     }
   }
@@ -403,6 +467,9 @@ header {
     margin: 0 0 0 100px;  
     display: flex;
     
+      @media (max-width: 375px) {
+        display: none;
+      }
     /* ARROW END */ 
     .arrow {
       @include size(45px, 5px);
@@ -468,7 +535,7 @@ header {
       .active {
         background: $borderColor;
       }
-    }
+    } 
   }
 
   .online-control {
@@ -477,6 +544,10 @@ header {
     flex-direction: column;
     margin: 90px auto;
     
+    @media (max-width: 375px) {
+      margin-top: 320px;
+    }
+
     div {
       font-family: $yesevaOneFace;
       font-style: normal;
@@ -485,6 +556,7 @@ header {
       line-height: 28px;
       text-align: center;
       text-transform: uppercase;
+      padding-bottom: 10px;
       color: $textColor;
     }
 
@@ -492,11 +564,44 @@ header {
       color: #E3B873;
       border-radius: 30px;
       letter-spacing: -0.07em;
-
+      
       img {
         @include size(34px, 29px);
-        margin: 0 5px 0 15px;
-       
+        margin: 0 5px -7px 12px;
+      }
+    }
+  }
+  
+  /* MOBILE  */
+  .slider-mobile {
+    display: none;
+
+    @media (max-width: 375px) {
+      display: block;
+
+      @include size(375px, 241px);
+      text-align: center;
+
+      img {
+        @include size(340px, 241px);
+      }
+    }
+
+    &-control {
+      @include size(310px, 36px);
+
+      position: absolute;
+      display: flex;
+      justify-content: space-between;
+      margin-top: -140px;
+      margin-left: 30px;
+
+      div {
+        @include size(36px);
+
+        img {
+          @include size(36px);
+        }
       }
     }
   }
