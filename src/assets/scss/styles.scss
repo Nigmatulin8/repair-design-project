@@ -231,7 +231,7 @@ header {
     line-height: 15px;
     text-align: center;
     margin-right: 20px;
-    padding: 19px 41px;
+    padding: 19px 33px;
     border: 1px solid $textColor;
     border-radius: 3px;
     transition: background-color .2s linear;
@@ -249,7 +249,7 @@ header {
   }
 
   &-fix {
-    padding: 19px 23px;
+    padding: 19px 15px;
   }
 
   &-scroll {
@@ -282,5 +282,222 @@ header {
 
 .completed-rojects {
   @include size(1438px, 1074px);
-  background: $bgColor;
+  
+  .dark-side {
+    @include size(1438px, 900px);
+    background: $bgColor;
+    border-top: 1px solid $bgColor;
+
+    .slide-nav {
+      margin: 107px 0 52px 554px;
+
+      ul {
+        margin: 0;
+        
+
+        li {
+          display: inline;
+          list-style-type: none;
+          text-transform: uppercase;
+
+          font-family: $yesevaOneFace;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 19px;
+          margin-right: 58px;
+          
+          a {
+            color: rgba(255, 255, 255, 0.3);
+          }
+          
+          a:hover {
+            color: $linkColor;
+            border-bottom: 1px solid $linkColor;
+          } 
+        }
+      }
+    }
+
+    &-slider {
+      @include size(1438px, 470px);
+      display: flex;
+
+      &-text {
+        @include size(455px, 470px);
+        margin: 0 40px 0 100px;
+
+        .dark-header-text {
+          font-family: $yesevaOneFace;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 27px;
+          color: $mainTextColor;
+          line-height: 37px;
+          letter-spacing: -0.07em;
+          text-transform: uppercase;
+
+          span {
+            margin-left: 20px;
+          }
+        }
+
+        .dark-description-text {
+          font-size: 18px;
+          line-height: 29px;
+          color: $textColor;
+          font-family: FuturaBookC;
+          margin-top: 35px;
+        }
+
+        .dark-param-text {
+          display: flex;
+          flex-wrap: wrap;
+      
+          .element {
+            width: 213px;
+            margin: 42px 0 0 0;
+
+            &-header {
+              font-family: $yesevaOneFace;
+              font-style: normal;
+              font-weight: normal;
+              font-size: 18px;
+              line-height: 25px;
+              text-transform: uppercase;
+              color: $mainTextColor;
+              margin-bottom: 9px;
+            }
+
+            &-description {
+              width: 100px;
+              font-family: $futuraBookFace;
+              font-size: 15px;
+              line-height: 20px;
+              color: $textColor;
+            }
+          }
+        }
+      }
+
+      &-slides {
+        @include size(843px, 470px);
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+
+        img {
+          @include size(679px 482px);
+        }
+
+        .slide-arrow {
+          position: absolute;
+          margin: 190px 0 0 730px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .main-slider-nav-bar {
+    margin: 0 0 0 100px;  
+    display: flex;
+    
+    /* ARROW END */ 
+    .arrow {
+      @include size(45px, 5px);
+      cursor: pointer;
+      padding-top: 5px;
+
+      div {
+        @include size(45px, 1px);
+        position: relative;
+        top: 0px;
+        background-color: $textColor;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+        left:0;
+        display: block;
+
+        &::after {
+          @include size(10px, 1px);
+          content: '';
+          position: absolute;
+          top: -3px;
+          right: -3px;
+          background-color: $textColor;
+          transform: rotate(45deg);
+        }
+
+        &::before {
+          @include size(10px, 1px);
+          content: '';
+          position: absolute;
+          top: 3px;
+          right: -3px;
+          background-color: $textColor;
+          box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+          transform: rotate(-45deg);
+        }
+      }
+    }
+
+    .arrow-2 {
+      div::after {
+        right: 37px;
+        transform: rotate(-45deg);
+      }
+
+      div::before {
+        right: 37px;
+        transform: rotate(45deg);
+      }
+    }
+    /* ARROW END */ 
+
+    .slide-points {
+      display: flex;
+      margin: 0 10px;
+
+      &-point {
+        @include size(10px);
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 30px; 
+        margin: 0 10px;
+      }
+
+      .active {
+        background: $borderColor;
+      }
+    }
+  }
+
+  .online-control {
+    @include size(200px, 50px);
+    display: flex;
+    flex-direction: column;
+    margin: 90px auto;
+    
+    div {
+      font-family: $yesevaOneFace;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 28px;
+      text-align: center;
+      text-transform: uppercase;
+      color: $textColor;
+    }
+
+    .line {
+      color: #E3B873;
+      border-radius: 30px;
+      letter-spacing: -0.07em;
+
+      img {
+        @include size(34px, 29px);
+        margin: 0 5px 0 15px;
+       
+      }
+    }
+  }
 }

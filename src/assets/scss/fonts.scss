@@ -1,32 +1,28 @@
 @font-face {
   font-family: 'FuturaBookC';
-  src: url('/assets/fonts/FuturaBookC.eot');
-  src: url('/assets/fonts/FuturaBookC.eot?#iefix') format('embedded-opentype'), 
-        url('/assets/fonts/FuturaBookC.woff2') format('woff2'), 
-        url('/assets/fonts/FuturaBookC.woff') format('woff'), 
-        url('/assets/fonts/FuturaBookC.otf') format('truetype');
+  src: url('/assets/fonts/futurabookc.otf');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'FuturaDemiC';
-  src: url('/assets/fonts/FuturaDemiC.eot');
-  src: url('/assets/fonts/FuturaDemiC.eot?#iefix') format('embedded-opentype'), 
-      url('/assets/fonts/FuturaDemiC.woff2') format('woff2'), 
-      url('/assets/fonts/FuturaDemiC.woff') format('woff'), 
-      url('/assets/fonts/FuturaDemiC.ttf') format('truetype');
+  src: url('/assets/fonts/futurademic.otf');
+  src: url('/assets/fonts/futurademic.eot?#iefix') format('embedded-opentype'), 
+      url('/assets/fonts/futurademic.woff2') format('woff2'), 
+      url('/assets/fonts/futurademic.woff') format('woff'), 
+      url('/assets/fonts/futurademic.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'FuturaMediumC';
-  src: url('/assets/fonts/FuturaMediumC.eot');
-  src: url('/assets/fonts/FuturaMediumC.eot?#iefix') format('embedded-opentype'), 
-        url('/assets/fonts/FuturaMediumC.woff2') format('woff2'), 
-        url('/assets/fonts/FuturaMediumC.woff') format('woff'), 
-        url('/assets/fonts/FuturaMediumC.ttf') format('truetype');
+  src: url('/assets/fonts/futuramediumc.otf');
+  src: url('/assets/fonts/futuramediumc.eot?#iefix') format('embedded-opentype'), 
+        url('/assets/fonts/futuramediumc.woff2') format('woff2'), 
+        url('/assets/fonts/futuramediumc.woff') format('woff'), 
+        url('/assets/fonts/futuramediumc.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
 }
@@ -44,22 +40,22 @@
 
 @font-face {
   font-family: 'ProximaNovaRg';
-  src: url('/assets/fonts/ProximaNova-Regular.eot');
+  src: url('/assets/fonts/ProximaNova-Regular.ttf');
         src: url('/assets/fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'), 
         url('/assets/fonts/ProximaNova-Regular.woff2') format('woff2'), 
         url('/assets/fonts/ProximaNova-Regular.woff') format('woff'), 
-        url('/assets/fonts/ProximaNova-Regular.ttf') format('truetype');
+        url('/assets/fonts/ProximaNova-Regular.eot') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'ProximaNovaBd';
-  src: url('/assets/fonts/ProximaNova-Bold.eot');
+  src: url('/assets/fonts/ProximaNova-Bold.ttf');
         src: url('/assets/fontsProximaNova-Bold.eot?#iefix') format('embedded-opentype'), 
         url('/assets/fonts/ProximaNova-Bold.woff2') format('woff2'), 
         url('/assets/fonts/ProximaNova-Bold.woff') format('woff'), 
-        url('/assets/fonts/ProximaNova-Bold.ttf') format('truetype');
+        url('/assets/fonts/ProximaNova-Bold.eot') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
