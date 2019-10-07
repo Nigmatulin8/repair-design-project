@@ -288,7 +288,7 @@ header {
   }
 
   .dark-side {
-    @include size(1438px, 900px);
+    @include size(1438px, 1052px);
     background: $bgColor;
     border-top: 1px solid $bgColor;
     
@@ -571,8 +571,7 @@ header {
       }
     }
   }
-  
-  /* MOBILE  */
+
   .slider-mobile {
     display: none;
 
@@ -601,6 +600,201 @@ header {
 
         img {
           @include size(36px);
+        }
+      }
+    }
+  }
+
+  .white-side {
+    border: 1px solid red;
+    background: white;
+
+    .repair-video {
+      @include size(817px, 434px);
+      margin: -217px auto 0px;
+
+      iframe {  
+        width: inherit;
+        height: inherit;
+      }
+    }
+
+    .line {
+      @include size(55px, 1px);
+      border-top: 1px solid #e3b873;
+      margin: 62px auto 34px;
+    }
+
+    &-text {
+      @include size(681px, 131px);
+
+      font-family: FuturaBookC;
+      font-size: 20px;
+      line-height: 34px;
+      text-align: center;
+      color: #363636;
+      margin: 0 auto 93px;
+    }
+
+    form {
+      @include size(760px, 200px);
+      margin: 0 auto 115px;
+      
+      .form-values {
+        display: flex;
+
+        div {
+          @include size(232px, 30px);
+          margin: 0 50px 20px 0;
+        }
+      }
+
+
+      label {
+        font-family: FuturaBookC;
+        font-size: 15px;
+        line-height: 20px;
+        color: rgba(54, 54, 54, 0.5);
+      }
+
+      input {
+        @include size(230px, 20px);
+        display: inline;
+        border: none;
+        border-bottom: 1px solid rgba(54, 54, 54, 0.3);
+        box-sizing: border-box;
+        outline: none;
+        margin-top: 5px;
+      }
+
+      .white-form-submit {
+        @include size(200px, 51px);
+        background: #E3B873;
+        box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.15);
+        border-radius: 2px;
+        cursor: pointer;
+        font-family: FuturaDemiC;
+        font-size: 15px;
+        line-height: 26px;
+        text-align: center;
+        text-transform: uppercase;
+        color: $textColor;
+
+        &:hover {
+          box-shadow: 0px 0px 12px rgba(227, 184, 125, 1);
+        }
+      }  
+
+      .personal-data-checkbox {
+        @include size(300px, 30px);
+        margin: 39px auto 0px;
+
+        label input {
+          display: none;
+        }
+
+        label span {
+          @include size(18px);
+          display: inline-block;
+          position: relative;
+          background-color:$linkColor;
+          border-radius:2px;
+          margin-bottom: -4px;
+        }
+
+        input[type=checkbox]:checked + span:before {
+          content: '\2714';
+          position: absolute;
+          left: 3px;
+          font-size: 14px;
+          color: white;
+        }
+      }
+    }
+
+    .types-of-repair {
+      @include size(200px, 80px);
+      margin: 0 auto;
+      text-align: center;
+
+      &__text {
+        font-family: $yesevaOneFace;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 28px;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 7px;
+        color: #181818;
+      }
+
+      &__line {
+        display: flex;
+        margin-left: 40px;
+        color: #E3B873;
+        border-radius: 30px;
+        letter-spacing: -0.07em;
+        font-size: 20px;
+
+        img {
+          @include size(28px, 28px);
+          margin: 0 5px -7px 12px;
+        }
+      }
+    }
+
+    .repair-rooms {
+      @include size(1238px, 629px);
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+
+      .room {
+        @include size(392px, 629px);
+      }
+
+      &-description {
+        width: 330px;
+        margin: -98px 31px 20px;
+        background-color: white;
+        position: absolute;
+     
+        div {
+          @include size(210px, 21px);
+          margin: 20px 0 5px 25px;
+          font-family: $yesevaOneFace;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 18px;
+          line-height: 25px;
+          color: #363636;
+        }
+
+        ul {
+          width: 267px;
+          margin-top: 5px;
+
+          li {
+            font-family: $futuraBookFace;
+            font-size: 15px;
+            line-height: 25px;
+            color: #959595;
+          }
+        }
+
+        .repair-price {
+          background: $linkColor;
+          padding: 21px 0px 21px 26px;
+          margin: 0;
+          box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+          font-family: $yesevaOneFace;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 18px;
+          line-height: 25px;
+          text-transform: uppercase;
+          color: $textColor;
         }
       }
     }
