@@ -849,8 +849,6 @@ header {
         text-transform: uppercase;
         margin-bottom: 7px;
         color: #181818;
-
-
       }
 
       &__line {
@@ -942,6 +940,11 @@ header {
           line-height: 25px;
           text-transform: uppercase;
           color: $textColor;
+          cursor: pointer;
+
+          &:hover {
+            box-shadow: 0px 0px 15px rgba(227, 184, 125, 1);
+          }
 
           @media (max-width: 375px) {
             font-size: 15px;
