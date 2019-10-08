@@ -588,7 +588,6 @@ header {
 
     &-control {
       @include size(310px, 36px);
-
       position: absolute;
       display: flex;
       justify-content: space-between;
@@ -606,16 +605,32 @@ header {
   }
 
   .white-side {
-    border: 1px solid red;
+    border-top: 1px solid white;
     background: white;
+
+    @media (max-width: 375px) {
+      border-top: 1px solid black;
+      width: 375px;
+    }
 
     .repair-video {
       @include size(817px, 434px);
-      margin: -217px auto 0px;
+      margin: -217px auto 0;
+      
+      @media (max-width: 375px) {
+        @include size(375px, 250px);
+        background: $bgColor;
+        margin: -150px auto 0;
+      }
 
       iframe {  
         width: inherit;
         height: inherit;
+  
+        @media (max-width: 375px) {
+          @include size(340px, 207px);
+          padding-left: 17px; 
+        }
       }
     }
 
@@ -623,38 +638,92 @@ header {
       @include size(55px, 1px);
       border-top: 1px solid #e3b873;
       margin: 62px auto 34px;
+
+      @media (max-width: 375px) {
+        @include size(375px, 20px);
+        
+        &::before {
+          content: "--------------------------";
+        }
+
+        background: $bgColor;
+        letter-spacing: -0.07em;
+        color: $linkColor;
+        text-align: center;
+        margin: 0;
+        border: none;
+      }
     }
 
     &-text {
       @include size(681px, 131px);
-
-      font-family: FuturaBookC;
+      font-family: $futuraBookFace;
       font-size: 20px;
       line-height: 34px;
       text-align: center;
       color: #363636;
       margin: 0 auto 93px;
+
+      @media (max-width: 375px) {
+        @include size(345px, 200px);
+
+        background: $bgColor;
+        color: $textColor;
+        font-size: 14px;
+        padding: 10px 15px 0;
+        line-height: 24px;
+        margin-bottom: 0;
+
+        span { 
+          display: none; 
+        }
+      }
     }
 
     form {
       @include size(760px, 200px);
       margin: 0 auto 115px;
       
+      @media (max-width: 375px) {
+        @include size(375px, 235px);
+        display: block;
+        background: $bgColor;
+        margin-bottom: 80px;
+      }
+
       .form-values {
         display: flex;
-
+        
         div {
           @include size(232px, 30px);
           margin: 0 50px 20px 0;
+
+          @media (max-width: 375px) {
+            @include size(270px, 50px);
+            margin: 0 50px 20px 0;
+          }
+        }
+
+        @media (max-width: 375px) {
+          @include size(345px, 150px);
+          display: block;
+          background: $bgColor;
+          margin: 0 auto;
         }
       }
 
 
       label {
-        font-family: FuturaBookC;
+        font-family: $futuraBookFace;
         font-size: 15px;
         line-height: 20px;
         color: rgba(54, 54, 54, 0.5);
+
+        @media (max-width: 375px) {
+          font-size: 15px;
+          line-height: 20px;
+          color: rgba(255, 255, 255, 0.5);
+        }
       }
 
       input {
@@ -665,6 +734,15 @@ header {
         box-sizing: border-box;
         outline: none;
         margin-top: 5px;
+
+        @media (max-width: 375px) {
+          width: 340px;
+          background: $bgColor;
+          color: white;
+          font-size: 18px;
+          line-height: 25px;
+          border-bottom: 1px solid rgb(255, 255, 255);
+        }
       }
 
       .white-form-submit {
@@ -683,11 +761,20 @@ header {
         &:hover {
           box-shadow: 0px 0px 12px rgba(227, 184, 125, 1);
         }
+
+        @media (max-width: 375px) {
+          @include size(340px, 51px);
+          margin: 0 auto;
+        }
       }  
 
       .personal-data-checkbox {
         @include size(300px, 30px);
         margin: 39px auto 0px;
+        
+        @media (max-width: 375px) {
+          display: none;
+        }
 
         label input {
           display: none;
@@ -710,12 +797,47 @@ header {
           color: white;
         }
       }
+      
+      .mobile__checkbox {
+        display: none;
+      }
+
+      @media (max-width: 375px) {
+        .mobile__checkbox {
+          display: block;
+          label input {
+            display: none;
+          }   
+
+          label span {
+            @include size(18px);
+            display: inline-block;
+            position: relative;
+            background-color:$linkColor;
+            border-radius:2px;
+            margin-bottom: -4px;
+          }
+
+          input[type=checkbox]:checked + span:before {
+            content: '\2714';
+            position: absolute;
+            left: 3px;
+            font-size: 16px;
+            color: white;
+          }
+        }
+      }
     }
 
     .types-of-repair {
       @include size(200px, 80px);
       margin: 0 auto;
-      text-align: center;
+      text-align: center;  
+      
+      @media (max-width: 375px) {
+        font-size: 22px;
+        margin-bottom: 20px;
+      }
 
       &__text {
         font-family: $yesevaOneFace;
@@ -727,6 +849,8 @@ header {
         text-transform: uppercase;
         margin-bottom: 7px;
         color: #181818;
+
+
       }
 
       &__line {
@@ -749,9 +873,23 @@ header {
       display: flex;
       justify-content: space-between;
       margin: 0 auto;
+      
+      @media (max-width: 375px) {
+        @include size(375px, 1000px);
+        flex-direction: column;
+      }
 
       .room {
         @include size(392px, 629px);
+
+        @media (max-width: 375px) {
+          @include size(340px, 485px);
+          margin: 0 auto 250px;
+
+          img {
+            width: 340px;
+          }
+        }
       }
 
       &-description {
@@ -759,7 +897,12 @@ header {
         margin: -98px 31px 20px;
         background-color: white;
         position: absolute;
-     
+
+        @media (max-width: 375px) {
+          width: 270px;
+          margin-left: 0;
+        }
+
         div {
           @include size(210px, 21px);
           margin: 20px 0 5px 25px;
@@ -780,6 +923,10 @@ header {
             font-size: 15px;
             line-height: 25px;
             color: #959595;
+
+            @media (max-width: 375px) {
+              font-size: 13px;
+            }
           }
         }
 
@@ -795,6 +942,10 @@ header {
           line-height: 25px;
           text-transform: uppercase;
           color: $textColor;
+
+          @media (max-width: 375px) {
+            font-size: 15px;
+          }
         }
       }
     }
