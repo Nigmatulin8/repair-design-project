@@ -952,5 +952,131 @@ header {
         }
       }
     }
+
+    .leave-a-request-wrapper {
+      display: flex;
+      margin: 115px 0px 0px 0px;
+    }
+
+    .leave-a-request {
+      background-image: url("/assets/img/ring-bg.png");
+      background-repeat: no-repeat;  
+    }
+    
+    .ring-text-style {
+      font-family: $futuraDemicFace;
+      font-size: 18px;
+      line-height: 21px;
+      color: #363636;
+    }
+    
+    .ring-text {
+      &-one {
+        @include size(390px, 42px);
+        margin-top: 115px;
+        margin-left: 410px;
+      }
+
+      &-two {
+         @include size(120px, 21px);
+         margin-top: 80px;
+         margin-left: 490px;
+      }
+
+      &-three {
+         @include size(140px, 21px);
+         margin-top: 140px;
+         margin-left: 510px;
+      }
+
+      &-four {
+         @include size(250px, 42px);
+         margin-top: 130px;
+         margin-left: 450px;
+      }
+    }
+
+    .request-form {
+      @include size(480px, 514px);
+      background: $bgColor;
+      box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.05);
+      margin-top: 100px;  
+
+      .header-text {
+        width: 250px;
+        margin: 20px auto 0;
+        font-family: $futuraDemicFace;
+        font-size: 20px;
+        line-height: 25px;
+        text-align: center;
+        color: $textColor;
+      }
+
+      label {
+        font-family: $futuraDemicFace;
+        font-size: 15px;
+        line-height: 20px;
+        color: rgba(255, 255, 255, 0.5);
+      }
+      
+      .form-input {
+        margin: 50px 40px 0px;
+      }
+
+      input {
+        @include size(100%, 20px);
+        display: inline;
+        border: none;
+        border-bottom: 1px solid rgba(54, 54, 54, 0.3);
+        box-sizing: border-box;
+        outline: none;
+        margin-top: 5px;
+        background: none;
+      }
+
+      .checkbox-mod {
+        margin-left: 40px;
+      }
+
+      .request-submit {
+        @include size(211px, 51px);
+        margin: 15px 0 0 230px;
+        background: #E3B873;
+        box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.15);
+        font-family: $futuraDemicFace;
+        font-size: 13px;
+        line-height: 18px;
+        text-align: center;
+        text-transform: uppercase;
+        color: $textColor;
+        cursor: pointer;
+
+        &:hover {
+          box-shadow: 0px 0px 10px rgba(227, 184, 125, 0.6);
+        }
+      }
+
+      .help-save {
+        @include size(442px, 72px);
+        margin: 60px 0 0 20px;
+        font-family: FuturaDemiC;
+        font-size: 20px;
+        line-height: 25px;
+        color: #E3B873;
+        text-shadow: 0px 3px 10px rgba(227, 184, 115, 0.15);
+
+        .pig {
+          @include size(65px);
+          background: #E3B873;
+          margin: -10px 20px 0 0;
+          background-image: url("/assets/img/pig.svg");
+          background-repeat: no-repeat;
+          background-size: 50px;
+          background-position: 9px 10px;
+          border-radius: 50%;
+          float: left;
+        }
+      }
+    }
   }
 }
