@@ -870,6 +870,10 @@ header {
     .leave-a-request-wrapper {
       display: flex;
       margin: 115px 0px 0px 0px;
+
+      @media (max-width: 375px) {
+        display: none;
+      } 
     }
 
     .leave-a-request {
@@ -1093,10 +1097,21 @@ header {
         url("/assets/img/wildest-bg.jpg");
 
   margin: 250px 0 0 0;
+  
+  @media (max-width: 375px) {
+    @include size(375px, 350px);
+    background: none;
+    margin-top: 200%;
+  }
 
  .wildest-description {
     @include size(300px, 66px);
     margin: 145px 190px 40px 100px;
+    
+     @media (max-width: 375px) {
+      @include size(375px, 400px);
+      margin-left: 0px;
+    }
 
     &__header {
       font-family: $yesevaOneFace;
@@ -1107,11 +1122,23 @@ header {
       text-transform: uppercase;
       color: $mainTextColor;
       margin-bottom: 20px;
+
+      @media (max-width: 375px) {
+        width: 300px;
+        font-size: 22px;
+        line-height: 30px;
+        text-align: center;
+        margin-left: 30px;
+      }
     }
 
     ul {
       display: inline;
       list-style-type: none;
+
+      @media (max-width: 375px) {
+        display: none;
+      }
 
       li { 
         margin-bottom: 15px;
@@ -1134,6 +1161,10 @@ header {
   
   .wildest-slides {
     @include size(753px, 753px);
+    
+    @media (max-width: 375px) {
+      display: none;
+    }
 
     &__left, &__right {
       width: 354px;
@@ -1159,10 +1190,21 @@ header {
 .design-project {
   @include size(1438px, 470px);
   margin-top: 150px;
+  
+  @media (max-width: 375px) {
+    width: 375px;
+    background: #252525;
+  }
 
   .design-project__description {
     @include size(765px, 150px);
     margin: 0 auto 40px;
+    
+    @media (max-width: 375px) {
+      @include size(375px, 170px);
+      margin-top: -155px;
+      padding-top: 150px;
+    }
 
     .description-header {
       font-family: $yesevaOneFace;
@@ -1174,6 +1216,12 @@ header {
       text-transform: uppercase;
       color: #181818;
       margin: 0 auto;
+
+      @media (max-width: 375px) {
+        font-size: 22px;
+        line-height: 30px;
+        color: $textColor;
+      }
     }
 
     .description-main-text {
@@ -1182,6 +1230,14 @@ header {
       line-height: 27px;
       text-align: center;
       color: #363636;
+
+      @media (max-width: 375px) {
+        width: 280px;
+        font-size: 15px;
+        line-height: 20px;
+        color: $textColor;
+        margin: 0 auto;
+      }
     }
   }
 
@@ -1196,6 +1252,30 @@ header {
 
     img {
       margin-bottom: -5px;
+    }
+  }
+
+  @media (max-width: 375px) {
+    .design-background {
+      height: 1730px;
+      background: #252525;
+      display: block;
+    }
+
+    .hide-design-slider-descr {
+      display: none;
+    }
+
+    .add-extra {
+      height: 580px;
+    }
+
+    .add-extra-margin {
+      margin-top: -300px;
+    }
+
+    .room-fix {
+      margin-top: -220px;
     }
   }
 }
