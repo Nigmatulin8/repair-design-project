@@ -8,6 +8,7 @@
 $futuraDemicFace: "FuturaDemiC", sans-serif;
 $futuraBookFace: "FuturaBookC", sans-serif;
 $yesevaOneFace: "YesevaOne", serif;
+$proximaNovaRgFace: "ProximaNovaRg", serif;
 $mainTextColor: #e3b873;
 $borderColor: #ffffff;
 $textColor: #ffffff;
@@ -159,7 +160,7 @@ header {
   background: linear-gradient(
         rgba(0, 0, 0, 0.7), 
         rgba(0, 0, 0, 0.7)), 
-        url(/assets/img/main-bg.png);
+        url("/assets/img/main-bg.png");
 
   &-text {
     margin: 194px 0 0 60px;
@@ -1068,7 +1069,7 @@ header {
         .pig {
           @include size(65px);
           background: #E3B873;
-          margin: -10px 20px 0 0;
+          margin: -10px 20px 0  0;
           background-image: url("/assets/img/pig.svg");
           background-repeat: no-repeat;
           background-size: 50px;
@@ -1077,6 +1078,78 @@ header {
           float: left;
         }
       }
+    }
+  }
+}
+
+.wildest-fantasies {
+  @include size(1438px, 864px);
+  display: flex;
+  background: linear-gradient(
+        rgba(0, 0, 0, 0.7), 
+        rgba(0, 0, 0, 0.7)), 
+        url("/assets/img/wildest-bg.jpg");
+
+  margin: 300px 0 0 0;
+
+ .wildest-description {
+    @include size(300px, 66px);
+    margin: 145px 190px 40px 100px;
+
+    &__header {
+      font-family: $yesevaOneFace;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 27px;
+      line-height: 37px;
+      text-transform: uppercase;
+      color: $mainTextColor;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      display: inline;
+      list-style-type: none;
+
+      li { 
+        margin-bottom: 15px;
+
+        a {
+          font-family: $proximaNovaRgFace;
+          font-size: 20px;
+          line-height: 34px;
+          color: $textColor;
+          cursor: pointer;
+
+          &:hover {
+            color: $mainTextColor;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+  
+  .wildest-slides {
+    @include size(753px, 753px);
+
+    &__left, &__right {
+      width: 354px;
+      display: flex;
+      flex-direction: column;
+
+      img {
+        margin-bottom: 40px;
+      }
+    }
+
+    &__left {
+      margin: -40px 45px 0 0;
+      float: left;
+    }
+
+    &__right {
+      margin-top: -105px;
     }
   }
 }
