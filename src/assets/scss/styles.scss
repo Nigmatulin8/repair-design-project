@@ -1415,3 +1415,160 @@ header {
     }
   }
 }
+
+.our-team {
+  @include size(1436px, 885px);
+  margin-top: -390px;
+  
+  @media (max-width: 375px) {
+    @include size(375px, 1680px);
+    margin-top: 1619px;
+    padding-top: 40px;
+    background: #252525;
+  }
+
+  .team-description {
+    @include size(450px, 170px);
+    margin: 0 auto;
+    text-align: center; 
+    
+    @media (max-width: 375px) {
+      @include size(375px, 200px);
+      margin-bottom: -50px;
+    }
+
+    .team-header {
+      font-family: $yesevaOneFace;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 28px;
+      text-align: center;
+      text-transform: uppercase;
+      color: $textColor;
+
+      @media (max-width: 375px) {
+        font-size: 22px;
+        line-height: 28px;
+      }
+    }
+
+    .team-text {
+      font-family: $futuraBookFace;
+      font-size: 20px;
+      line-height: 27px;
+      text-align: center;
+      color: $textColor;
+
+      @media (max-width: 375px) {
+        display: none;
+      }
+    }
+
+    .team-text-mobile {
+      display: none;
+
+      @media (max-width: 375px) {
+        display: block;
+        width: 350px;
+        margin: 0 auto;
+        font-family: $futuraBookFace;
+        font-size: 15px;
+        line-height: 20px;
+        color: $textColor;
+      }
+    }
+  }
+
+  .team {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 150px;
+    
+    @media (max-width: 375px) {
+      flex-wrap: wrap;
+      margin-left: 5px;
+    }
+
+    .member-box {
+      @include size(323px, 472px);
+
+      @media (max-width: 375px) {
+        margin-bottom: 40px;
+      }
+
+      .img-abs {
+        position: absolute;
+      }
+    }
+
+    .member {
+      margin: 50px 0 0 50px;
+    }
+
+    .member-description {
+      @include size(235px, 148px);
+      position: absolute;
+      text-align: center;
+      font-size: 18px;
+      background: #ffffff;
+      margin: -90px 0 0 70px; 
+
+      .name {
+        font-family: $yesevaOneFace;
+        font-style: normal;
+        font-weight: normal;
+        line-height: 25px;
+        color: #181818;
+        margin: 22px 0 10px 0;
+      }
+
+      .position {
+        font-family: $futuraBookFace;
+        line-height: 26px;
+        color: #959595;
+      }
+
+      .experience {
+        background: #e3b873;
+        font-family: $yesevaOneFace;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 20px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        padding: 15px 0;
+        margin-top: 15px;
+      }
+    }
+  }
+
+  .company-employee {
+    @include size(560px, 200px);
+    text-align: center;
+    margin: 30px auto 0;
+
+     @media (max-width: 375px) {
+      display: none;
+    }
+
+    .line {
+      font-family: $yesevaOneFace;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 27px;
+      line-height: 37px;
+      letter-spacing: -0.08em;
+      text-transform: uppercase;
+      color: $mainTextColor;
+    }
+
+    .text {
+      font-family: $futuraBookFace;
+      font-size: 20px;
+      line-height: 34px;
+      color: #363636;
+    }
+  }
+}
