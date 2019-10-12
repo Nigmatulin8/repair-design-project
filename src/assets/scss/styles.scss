@@ -1086,6 +1086,7 @@ header {
         }
       }
 }
+
 /* REPAIR ROOMS AND DESIGN PROJECT VIEW - END*/
 
 .wildest-fantasies {
@@ -1276,6 +1277,141 @@ header {
 
     .room-fix {
       margin-top: -220px;
+    }
+  }
+}
+
+.goal-step {
+  @include size(1438px, 1200px);
+  padding-top: 500px;
+  background: $bgColor;
+  display: flex;
+  justify-content: space-between;
+  
+  @media (max-width: 375px) {
+    display: none;
+  }
+
+  .goal-wrapper {
+    @include size(350px, 600px);
+    margin-left: 100px;
+  }
+
+  .steps {
+    @include size(350px, 100px);
+    margin-bottom: 90px;
+
+    .working {
+      font-family: $futuraDemicFace;
+      font-size: 15px;
+      line-height: 21px;
+      text-transform: uppercase;
+      color: $textColor;
+      margin-bottom: 15px;
+    }
+
+    .steps-header {
+      width: 200px;
+      font-family: $yesevaOneFace;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 27px;
+      line-height: 37px;
+      text-transform: uppercase;
+      color: $mainTextColor;
+      float: left;
+    }
+
+    .step-line {
+      font-family: $yesevaOneFace;
+      font-style: normal;
+      font-size: 27px;
+      line-height: 37px;
+      letter-spacing: -0.08em;
+      color: $mainTextColor;
+      margin-top: 50px;
+    }
+  }
+
+  .goal-slider {
+    .slide-number {
+      font-family:  $yesevaOneFace;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 25px;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+      color: $textColor;
+    }
+
+    &__slides {
+      .slides-header {
+        width: 250px;
+        font-family: $yesevaOneFace;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 23px;
+        text-transform: uppercase;
+        color: $mainTextColor;
+      }
+
+      .slides-text {
+        width: 350px;
+        font-family: $futuraBookFace;
+        font-size: 15px;
+        line-height: 25px;
+        color: $textColor;
+        margin-bottom: 60px;
+      }
+
+      .slider-add-extra {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .photo-slider {
+    @include size(805px, 600px);
+    margin-right: 100px;
+    margin-top: 85px;
+
+    &__numbers {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .slide-numb {
+      @include size(266px, 75px);
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 15px;
+      cursor: pointer;
+      margin-bottom: 35px;
+
+      .number {
+        width: 18px;
+        font-family: $yesevaOneFace;
+        font-style: normal;
+        font-weight: normal;
+        line-height: 21px;
+        text-transform: uppercase;
+        border-bottom: 1px solid;
+        margin-bottom: 17px;
+      }
+
+      .text {
+        font-family: $futuraBookFace;
+        line-height: 18px;
+      }
+
+      &:hover {
+        color: rgba(255, 255, 255, 1);
+      }
+    }
+
+    &__image {
+      @include size(805px, 421px);
     }
   }
 }
