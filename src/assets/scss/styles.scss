@@ -28,6 +28,10 @@ body {
   }
 }
 
+input {
+  color: white;
+}
+
 article {
   width: 1438px;
   margin: 0 auto;
@@ -39,7 +43,7 @@ article {
   }
 }
 
-header {
+header, footer {
   width: inherit;
   height: 83px;
   display: flex;
@@ -121,6 +125,14 @@ header {
 
   .request-a-call:hover {
     border: 2px solid $borderColor;
+  }
+}
+
+footer {
+  width: 1440px;
+
+  @media (max-width: 375px) {
+    display: none;
   }
 }
 
@@ -735,6 +747,7 @@ header {
         box-sizing: border-box;
         outline: none;
         margin-top: 5px;
+        color: black;
 
         @media (max-width: 375px) {
           width: 340px;
@@ -1670,6 +1683,228 @@ header {
 
       .days {
         padding-top: 8px;
+      }
+    }
+  }
+}
+
+.form-map {
+  @include size(1438px, 954px);
+  background: linear-gradient(
+        rgba(0, 0, 0, 0.2), 
+        rgba(0, 0, 0, 0.2)), 
+        url("/assets/img/background_3.png");
+  border: 1px solid #2b2b2b;
+  
+  @media (max-width: 375px) {
+    @include size(375px, 935px);
+    background: #252525;
+    margin: -2px 0 0 -2px;
+    overflow: hidden;
+  }
+
+  form {
+    border: 1px solid #181818;
+
+    @include size(885px, 465px);
+    background: #181818;
+    margin: -232px auto 60px;
+    
+    @media (max-width: 375px) {
+      @include size(370px, 500px);
+      background: #252525;
+      margin: -1px 0 25px 0;
+      background: #252525;
+    }
+
+    .form-values {
+      display: flex;
+      
+      div {
+        @include size(232px, 30px);
+        margin: 0 50px 20px 0;
+      }
+    }
+    
+    .form-input {
+      @media (max-width: 375px) {
+        width: 310px;
+        margin: 0 20px 40px;
+      }
+    }
+
+    .header-text {
+      font-family: $yesevaOneFace;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 28px;
+      text-align: center;
+      text-transform: uppercase;
+      color: $textColor;
+      margin-top: 45px;
+    }
+    
+    .in-wrapper {
+      width: 600px;
+      display: flex;
+      justify-content: space-between;
+      margin: 60px auto;
+
+      @media (max-width: 375px) {
+        display: block;
+      }
+    }
+
+    label {
+      font-family: $futuraBookFace;
+      font-size: 15px;
+      line-height: 20px;
+      color: rgba(255, 255, 255, 0.5);
+      text-align: left;
+    }
+
+    input {
+      @include size(250px, 20px);
+      display: inline;
+      border: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+      box-sizing: border-box;
+      outline: none;
+      margin-top: 5px;
+      background: none;
+
+      @media (max-width: 375px) {
+        width: 310px;
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+    
+    .question {
+      width: 600px;
+      margin: 0 auto;
+
+      input {
+        width: 600px;
+
+        @media (max-width: 375px) {
+          width: 310px;
+          font-size: 18px;
+          line-height: 24px;
+        }
+      }
+    }
+
+    .personal-data-checkbox {
+      @include size(300px, 30px);
+      margin: 39px auto 0px;
+        
+      label input {
+        display: none;
+      }
+
+      label span {
+        @include size(18px);
+        display: inline-block;
+        position: relative;
+        background-color:$linkColor;
+        border-radius:2px;
+        margin-bottom: -4px;
+      }
+
+      input[type=checkbox]:checked + span:before {
+        content: '\2714';
+        position: absolute;
+        left: 3px;
+        font-size: 14px;
+        color: white;
+      }
+    }
+
+    .request-submit {
+      @include size(200px, 51px);
+      background: #E3B873;
+      box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.1);
+      font-family: $futuraDemicFace;
+      font-size: 15px;
+      line-height: 26px;
+      text-align: center;
+      text-transform: uppercase;
+      color: $textColor;
+      margin: 25px 340px;
+      cursor: pointer;
+
+      &:hover {
+        box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.4);
+      }
+
+      @media (max-width: 375px) {
+        width: 330px;
+        margin: 40px 20px 0;
+      }
+    }
+  }
+
+  .adress {
+    @include size(590px, 51px);
+    font-family: $yesevaOneFace;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $mainTextColor;
+    margin: 0 auto;
+    
+    @media (max-width: 375px) {
+      @include size(375px, 390px);
+      background: #252525;
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      padding-top: 20px;
+    }
+    
+    &-description {
+      @media (max-width: 375px) {
+        width: 320px;        
+        font-size: 18px;
+        line-height: 25px;
+        margin: 15px auto 0;
+        order: 2;
+      }
+    }
+
+    .social {
+      margin-top: 30px;
+      order: 3;
+
+      img {
+        margin: 0 10px;
+        cursor: pointer;
+      }
+    }
+
+    .map {
+      width: 850px;
+      margin-top: 20px;
+      margin-left: -130px;
+        
+      @media (max-width: 375px) {
+        width: 320px;
+        margin-left: 30px;
+        order: 1;
+        margin-bottom: 20px;
+      }
+
+      img {
+        width: 850px;
+
+        @media (max-width: 375px) {
+          width: 320px;
+        }
       }
     }
   }
